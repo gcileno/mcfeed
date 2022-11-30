@@ -1,0 +1,27 @@
+body{
+    padding: 0px;
+}
+
+
+a:hover{
+    background-color: whitesmoke;
+    color: rgba(1, 1, 105, 0.884);
+}
+
+.img-fluid{
+    background-color: rgba(19, 173, 219, 0.623);
+    display: auto; 
+    align-self: center;
+    border-radius: 100%;
+
+}
+
+.item{
+    border-radius: 100%;
+    align-items: center;
+}
+
+/*conteudo das tabelas dinamicas que recebem os valores*/
+.conteudo{
+    text-align: center;
+}

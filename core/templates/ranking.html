@@ -1,0 +1,55 @@
+<!-- extende o código do index reutilizando apágina index
+style="overflow-x: auto; max-width: 100%; width: 100%; margin-left: auto; margin-right: auto;"-->
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div>
+    <table clas="flex-column" style="border: 1px solid #99acc2; width: 100%;">
+        <p>Serviço Prata</p>
+        <tr>
+            <td>Nome</td>
+            <td>Produzido</td>
+        </tr>
+        {% for vendedor in prata %}
+        <tr class="conteudo">
+            <td>{{ vendedor.nome }}</td>
+            <td>{{ vendedor.prod_contr }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div>
+    <table class="flex-column" style="border: 1px solid #99acc2; width: 100%;">
+        <p>Serviço ouro</p>
+        <tr>
+            <td>Nome</td>
+            <td>Produzido</td>
+        </tr>
+        {% for vendedor in ouro %}
+        <tr class="conteudo">
+            <td>{{ vendedor.nome }}</td>
+            <td>{{ vendedor.prod_pos }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div class="flex-column">
+    <table class="table-sm" style="border: 1px solid #99acc2; width: 100%;">
+        <p>Venda de Produto</p>
+        <tr>
+            <td>Nome</td>
+            <td>Produzido</td>
+        </tr>
+        {% for vendedor in prod %}
+        <tr class="conteudo">
+            <td>{{ vendedor.nome }}</td>
+            <td>{{ vendedor.prod_ap }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
+<!-- fim do bloco-->

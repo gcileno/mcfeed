@@ -1,0 +1,48 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+    {% for vendedor in resultado %}
+    <table table class="hs-table-align-center" data-hs-responsive-table="true">
+        <table style="width: auto; border-collapse: collapse; table-layout: auto; border: 1px solid #99acc2; text-align: center;">
+        <p>Comissão de Vendedor</p>
+        <tr>
+            <th>{{ vendedor.matricula }}</th>
+            <th colspan="4">{{ vendedor.nome }}</th>
+        </tr>
+        <tr>
+            <td>Tipo</td>
+            <td>Quantidade</td>
+            <td>Atingimento meta</td>
+            <td>Valor Unitário</td>
+            <td>Total</td>
+        </tr>
+        <tr>
+            <td >Serviço prata</td>
+            <td>{{ vendedor.prod_contr }}</td>
+            <td>100%</td>
+            <td>R$ 22,50</td>
+            <td>{{ prata }}</td>
+        </tr>
+        <tr>
+            <td>Serviço Ouro</td>
+            <td>{{ vendedor.prod_pos }}</td>
+            <td>100%</td>
+            <td>R$ 47,04</td>
+            <td>{{ ouro }}</td>
+        </tr>
+        <tr>
+            <td>Produtos</td>
+            <td>{{ vendedor.prod_ap }}</td>
+            <td>100%</td>
+            <td>0.70%</td>
+            <td>{{ prod}}</td>
+        </tr>
+    </table>
+    {% endfor %}
+</div>
+{% endblock %}
