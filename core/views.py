@@ -44,14 +44,12 @@ def comissao(request):
 
 def detal(request):
 
-    vendedor = Vendedor.objects.filter(filial__vendedor=1).values()
+    vendedores = Vendedor.objects.filter(filial__id=1).all()
 
     #aqui eu vou receber o id e aplicar os dois filtros
 
-
     context={
-        'vendedor': vendedor,
-        #'vendedores': vendedor,
+        'vendedores': vendedores,
     }
 
     return render(request,'detalhado.html', context)

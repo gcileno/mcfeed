@@ -4,7 +4,7 @@
 
 {% block content %}
 
-{% for v in vendedor %}
+{% for v in vendedores %}
     <div class="d-flex align-items-stretch" style="padding: 4px;">
         <table lass="flex-row" style="border: 1px solid #99acc2; width: 100%;">
             <tr>
@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td>controle</td>
-                <td>{{ v.metas_id_contr }}</td>
+                <td>{{ v.metas.contr }}</td>
                 <td>{{ v.prod_contr }}</td>
                 <td>75%</td>
                 <td>2</td>
@@ -28,7 +28,7 @@
 
             <tr>
                 <td>Pos</td>
-                <td>{{ v.metas_contr }}</td>
+                <td>{{ v.metas.contr }}</td>
                 <td>{{ v.prod_pos }}</td>
                 <td>75%</td>
                 <td>2</td>
@@ -36,7 +36,7 @@
 
             <tr>
                 <td>Pre com recarga </td>
-                <td>meta pre</td>
+                <td>{{ v.metas.pre_rec }}</td>
                 <td>prod pre</td>
                 <td>75%</td>
                 <td>2</td>
