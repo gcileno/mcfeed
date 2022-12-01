@@ -27,8 +27,8 @@ class Vendedor (models.Model):
     prod_contr = models.IntegerField(null = True)
     prod_pos = models.IntegerField(null = True)
     prod_ap= models.FloatField(null = True) 
-    metas = models.ForeignKey('Metas',on_delete=models.SET_NULL,null=True)
-    filial=models.ForeignKey('Filial',on_delete=models.SET_NULL,null=True)
+    metas = models.ForeignKey('Metas',on_delete=models.SET_NULL,null=True, related_name='meta')
+    filial=models.ForeignKey('Filial',on_delete=models.SET_NULL,null=True, related_name='filial')
 
     def __str__(self):
         return f'{self.matricula} {self.nome}'
