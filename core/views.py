@@ -54,4 +54,15 @@ def detal(request):
 
     return render(request,'detalhado.html', context)
 
+def mcfeed(request):
+    return render(request,'mcfeed.html')
+
+def campanha(request):
+    return render(request, 'campanha.html')
+
+def prevcom(request):
+    a=['controle', 'pos', 'aparelho', 'serviço','pre recarga', 'seguro','aparelho fidel']
+
+
+    return render(request,'prevcom.html' ,{'as': a})
 
