@@ -1,0 +1,46 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block content %}
+<p>Aqui ficará as campanhas de incentivo a venda feitas pelo grupo que estão ativas</p>
+
+<div class="flex-column" style="border: 1px solid #99acc2; width: 50%;">
+    <div class="flex-column">
+        <h1>Semana Super Serviço Prata</h1>
+        <h5>Regras da campanha</h5>
+            <p>Atingir a meta da semana</p>
+            <p>Todos os vendedores e gerntes estão participando</p>
+            <table lass="flex-row" style="border: 1px solid #99acc2; width: 100%;">Premios
+                <tr>
+                    <th>Tipo de serviço</th>
+                    <th>valor</th>
+                </tr>
+                <tr>
+                    <td>Serviço Prata A</td>
+                    <td>R$ 10,00</td>
+                </tr>
+                <tr>
+                    <td>Serviço Prata B,C,D</td>
+                    <td>R$ 5,00</td>
+                </tr>
+            </table>
+    </div>
+    <div>
+        <h1>Acessório: Caixa de som</h1>
+        <ul>Regras
+            <p>Vender acessórios a cima da metas</p>
+            <p>os 5 primeiros colocado com vendas a cima da meta do mês</p>
+            <p>Todos as lojas participam</p>
+        </ul>
+        <ul>Premios
+            <p>1º Lugar: R$ 500,00</p>
+            <p>2º Lugar: R$ 200,00</p>
+            <p>3º Lugar: R$ 100,00</p>
+            <p>4º Lugar: Caixinha de som basic</p>
+            <p>5º Lugar: Fone Basic Bass</p>
+        </ul>
+    </div>
+</div>
+
+{% endblock content %}
