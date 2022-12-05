@@ -9,4 +9,7 @@ urlpatterns = [
     path('mcfeed/',views.mcfeed, name='mcfeed'),
     path('campanha/', views.campanha, name='campanha'),
     path('prevcom/',views.prevcom, name='prevcom'),
+    path('login/',views.login_user,name='login'),
+    path('login/submit',views.submit_login),
+    path('logout/',views.logout_user, name='logout'),
 ]

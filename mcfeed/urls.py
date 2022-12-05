@@ -24,5 +24,5 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    #path('', RedirectView.as_view(url='home.html', permanent = True)),
+    path('', RedirectView.as_view(url='login')),
 ]
