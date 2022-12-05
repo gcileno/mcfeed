@@ -10,11 +10,11 @@
   </head>
 <body>
 <!--div do bloco com nav bar -->
-  <div class="max-width.container-smsmmdlgxlxxl" style="display: flex; align-self: start;margin: 0%;">
+  <div class="max-width.container-smsmmdlgxlxxl" style="display: flex; align-self: start;">
 
-    <nav class="nav flex-column" style="background-color: rgb(0, 51, 109); height: 100%;">
+    <nav class="nav flex-column" style="background-color: rgb(0, 51, 109);">
 
-      <div class="item">
+      <div class="nav-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" class = img-fluid>
       </div>
         
@@ -41,6 +41,9 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'prevcom' %}">Previsão de comissão</a>
       </li>
+      <li class="nav-item" style="align-items: bottom ;">
+        <a class="nav-link" href="{% url 'logout' %}" >Sair</a>
+      </li>
     </nav>
 
     <!-- conteúdo -->
@@ -50,9 +53,9 @@
       {% endblock %}  
     </div>
   </div> 
-<!--
+
   <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
   <script src="{% static 'js/meujava.js'%}"></script>
-  -->
+
 </body>
 </html>
