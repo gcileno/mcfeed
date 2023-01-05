@@ -30,8 +30,8 @@ class Vendedor (models.Model):
     prod_ap= models.FloatField(null = True) 
     metas = models.ForeignKey('Metas',on_delete=models.SET_NULL,null=True, related_name='metas')
     filial=models.ForeignKey('Filial',on_delete=models.SET_NULL,null=True, related_name='filial')
-#   user=models.OneToOneField(User, on_delete=models.SET_NULL,null=True)
-
+    user= models.OneToOneField(User, on_delete=models.SET_NULL,null=True)
+    
 
     def __str__(self):
         return f'{self.matricula} {self.nome}'
